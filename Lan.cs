@@ -27,7 +27,8 @@ namespace TutorialMod
             {
                 string ip = sr.ReadLine();
                 var transport = NetworkManager.Singleton.GetComponent<UnityTransport>();
-                transport.SetConnectionData(ip, porta);
+                transport.ConnectionData.Address = ip;
+                transport.ConnectionData.Port = porta;
 
                 Console.WriteLine(ip);
             }
